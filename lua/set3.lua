@@ -50,9 +50,9 @@ Group.new("Function",            colors.red,     colors.none,        styles.NONE
 Group.new("Statement",           colors.orange,  colors.none,        styles.NONE)
 Group.new("Conditional",         colors.orange,  colors.none,        styles.NONE)
 Group.new("Repeat",              colors.orange,  colors.none,        styles.NONE)
-Group.new("Label",               colors.orange,  colors.none,        styles.italic)
+Group.new("Label",               colors.orange,  colors.none,        styles.None)
 Group.new("Operator",            colors.none,    colors.none,        styles.NONE)
-Group.new("Keyword",             colors.orange,  colors.none,        styles.italic)
+Group.new("Keyword",             colors.orange,  colors.none,        styles.None)
 Group.new("Exception",           colors.orange,  colors.none,        styles.NONE)
 --
 Group.new("PreProc",             colors.yellow,  colors.none,        styles.NONE)
@@ -61,7 +61,7 @@ Group.new("Define",              colors.yellow,  colors.none,        styles.NONE
 Group.new("Macro",               colors.yellow,  colors.none,        styles.NONE)
 Group.new("PreCondit",           colors.yellow,  colors.none,        styles.NONE)
 --
-Group.new("Type",                colors.magenta, colors.none,        styles.italic)
+Group.new("Type",                colors.magenta, colors.none,        styles.None)
 Group.new("StorageClass",        colors.magenta, colors.none,        styles.NONE)
 Group.new("Structure",           colors.magenta, colors.none,        styles.NONE)
 Group.new("Typedef",             colors.magenta, colors.none,        styles.NONE)
