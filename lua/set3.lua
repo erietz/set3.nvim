@@ -14,7 +14,7 @@ local special_colors = {
 }
 --]]
 
-Color.new('bg_foo',      "#282c34")
+Color.new('bg_foo',      "#202224")
 Color.new('fg_foo',      "#d8d8d8")
 Color.new('grey1',       "#5c5c5c")
 Color.new('grey2',       "#828282")
@@ -115,7 +115,7 @@ Group.new("SpellBad",            groups.String,  colors.none,        styles.unde
 Group.new("SpellCap",            colors.fire,    colors.bg_foo,      styles.none)
 Group.new("SpellLocal",          colors.grey4,   colors.bg_foo,      styles.none)
 Group.new("SpellRare",           colors.grey4,   colors.bg_foo,      styles.none)
-Group.new("Visual",              colors.bg_foo,  colors.magenta,     styles.none)
+Group.new("Visual",              colors.bg_foo,  colors.cyan:dark(), styles.none)
 Group.new("VisualNOS",           colors.bg_foo,  colors.fg_foo,      styles.none)
 Group.new("Whitespace",          colors.grey1,   colors.bg_foo,      styles.none)
 Group.new("Folded",              colors.grey2,   colors.grey_accent, styles.none)
