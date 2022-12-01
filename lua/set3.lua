@@ -14,6 +14,7 @@ local special_colors = {
 }
 --]]
 
+Color.new('black',       "#000000")
 Color.new('bg_foo',      "#202224")
 Color.new('fg_foo',      "#d8d8d8")
 Color.new('grey1',       "#5c5c5c")
@@ -83,7 +84,7 @@ Group.new("TabLineSelSeparator", colors.orange,  colors.none,        styles.none
 Group.new("TabLine",             colors.grey3,   colors.grey1,       styles.none)
 Group.new("TabLineSeparator",    colors.grey1,   colors.none,        styles.none)
 Group.new("TablineFill",         colors.red,     colors.bg_foo,      styles.none)
-Group.new("StatusLine",          colors.bg_foo,  colors.grey_accent, styles.none)
+Group.new("StatusLine",          colors.fg_foo,  colors.grey_accent, styles.none)
 Group.new("StatusLineNC",        colors.grey1,   colors.grey_accent, styles.none)
 Group.new("Conceal",             colors.bg_foo,  colors.grey4,       styles.none)
 Group.new("VertSplit",           colors.grey2,   colors.none,        styles.none)
@@ -123,10 +124,10 @@ Group.new("Directory",           colors.magenta, colors.bg_foo,      styles.none
 
 -- Git gutters and diffs
 
-Group.new("DiffAdd",    colors.magenta, colors.bg_foo, styles.none)
-Group.new("DiffChange", colors.orange,  colors.bg_foo, styles.none)
-Group.new("DiffDelete", colors.fire,    colors.bg_foo, styles.none)
-Group.new("DiffText",   colors.fg_foo,  colors.bg_foo, styles.none)
+Group.new("DiffAdd",    colors.black, colors.green,  styles.none)
+Group.new("DiffChange", colors.black, colors.blue,   styles.none)
+Group.new("DiffDelete", colors.black, colors.red,    styles.none)
+Group.new("DiffText",   colors.black, colors.yellow, styles.none)
 
 -- FZF
 
