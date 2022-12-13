@@ -14,23 +14,29 @@ local special_colors = {
 }
 --]]
 
-Color.new('black',       "#000000")
-Color.new('bg_foo',      "#202224")
-Color.new('fg_foo',      "#d8d8d8")
-Color.new('grey1',       "#5c5c5c")
-Color.new('grey2',       "#828282")
-Color.new('grey3',       "#adadad")
-Color.new('grey4',       "#d1d1d1")
-Color.new('grey5',       "#ededed")
-Color.new('grey_accent', "#373b41")
-Color.new('red',         "#fb8072")
-Color.new('green',       "#b3de69")
-Color.new('yellow',      "#ffffb3")
-Color.new('blue',        "#80b1d3")
-Color.new('magenta',     "#bebada")
-Color.new('cyan',        "#8dd3c7")
-Color.new('orange',      "#fdb462")
-Color.new('fire',        "#CF222B")
+local bg = vim.g.set3_bg
+if bg == 'hard' then
+    Color.new('bg_foo', '#202224')
+elseif bg == 'medium' or bg == nil then
+    Color.new('bg_foo', '#2A2A2A')
+elseif bg == 'soft' then
+    Color.new('bg_foo', '#353535')
+end
+
+Color.new('black',       '#000000')
+Color.new('fg_foo',      '#d5d5d5')
+Color.new('grey2',       '#999999')
+Color.new('grey3',       '#adadad')
+Color.new('grey4',       '#d1d1d1')
+Color.new('grey_accent', '#505050')
+Color.new('red',         '#fb8072')
+Color.new('green',       '#b3de69')
+Color.new('yellow',      '#ffffb3')
+Color.new('blue',        '#80b1d3')
+Color.new('magenta',     '#bebada')
+Color.new('cyan',        '#8dd3c7')
+Color.new('orange',      '#fdb462')
+Color.new('fire',        '#CF222B')
 
 -- Color assignments (see :h highlight-groups)
 
@@ -81,11 +87,11 @@ Group.new("Todo",                colors.green,   colors.none,        styles.NONE
 --
 Group.new("TabLineSel",          colors.grey4,   colors.bg_foo,      styles.bold )
 Group.new("TabLineSelSeparator", colors.orange,  colors.none,        styles.none)
-Group.new("TabLine",             colors.grey3,   colors.grey1,       styles.none)
-Group.new("TabLineSeparator",    colors.grey1,   colors.none,        styles.none)
+Group.new("TabLine",             colors.grey3,   colors.grey_accent,       styles.none)
+Group.new("TabLineSeparator",    colors.grey_accent,   colors.none,        styles.none)
 Group.new("TablineFill",         colors.red,     colors.bg_foo,      styles.none)
 Group.new("StatusLine",          colors.fg_foo,  colors.grey_accent, styles.none)
-Group.new("StatusLineNC",        colors.grey1,   colors.grey_accent, styles.none)
+Group.new("StatusLineNC",        colors.grey_accent,   colors.grey_accent, styles.none)
 Group.new("Conceal",             colors.bg_foo,  colors.grey4,       styles.none)
 Group.new("VertSplit",           colors.grey2,   colors.none,        styles.none)
 --
@@ -118,16 +124,16 @@ Group.new("SpellLocal",          colors.grey4,   colors.bg_foo,      styles.none
 Group.new("SpellRare",           colors.grey4,   colors.bg_foo,      styles.none)
 Group.new("Visual",              colors.bg_foo,  colors.cyan:dark(), styles.none)
 Group.new("VisualNOS",           colors.bg_foo,  colors.fg_foo,      styles.none)
-Group.new("Whitespace",          colors.grey1,   colors.bg_foo,      styles.none)
+Group.new("Whitespace",          colors.grey_accent,   colors.bg_foo,      styles.none)
 Group.new("Folded",              colors.grey2,   colors.grey_accent, styles.none)
 Group.new("Directory",           colors.magenta, colors.bg_foo,      styles.none)
 
 -- Git gutters and diffs
 
-Group.new("DiffAdd",    colors.black, colors.green,  styles.none)
-Group.new("DiffChange", colors.black, colors.blue,   styles.none)
-Group.new("DiffDelete", colors.black, colors.red,    styles.none)
-Group.new("DiffText",   colors.black, colors.yellow, styles.none)
+Group.new("DiffAdd",    colors.green, colors.bg_foo,  styles.none)
+Group.new("DiffChange", colors.blue, colors.bg_foo,   styles.none)
+Group.new("DiffDelete", colors.red, colors.bg_foo,    styles.none)
+Group.new("DiffText",   colors.yellow, colors.bg_foo, styles.none)
 
 -- FZF
 
@@ -184,7 +190,7 @@ Group.new("markdownLineBreak",          colors.cyan,       colors.none, styles.u
 
 Group.new("luaFunctionCall", groups.Function, groups.Function, groups.Function)
 
---                             Python
+-- Python
 
 Group.new("pythonoperator", groups.Operator, groups.Operator, styles.none)
 
