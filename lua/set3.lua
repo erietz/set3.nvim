@@ -23,26 +23,25 @@ elseif bg == 'soft' then
     Color.new('bg_foo', '#353535')
 end
 
-Color.new('black',       '#000000')
-Color.new('fg_foo',      '#d5d5d5')
-Color.new('grey2',       '#999999')
-Color.new('grey3',       '#adadad')
-Color.new('grey4',       '#d1d1d1')
-Color.new('grey_accent', '#505050')
-Color.new('red',         '#fb8072')
-Color.new('green',       '#b3de69')
-Color.new('yellow',      '#ffffb3')
-Color.new('blue',        '#80b1d3')
-Color.new('magenta',     '#bebada')
-Color.new('cyan',        '#8dd3c7')
-Color.new('orange',      '#fdb462')
-Color.new('fire',        '#CF222B')
+Color.new('black',   '#000000')
+Color.new('fg_foo',  '#d5d5d5')
+Color.new('grey0',   '#505050')
+Color.new('grey1',   '#999999')
+Color.new('grey2',   '#adadad')
+Color.new('red',     '#fb8072')
+Color.new('green',   '#b3de69')
+Color.new('yellow',  '#ffffb3')
+Color.new('blue',    '#80b1d3')
+Color.new('magenta', '#bebada')
+Color.new('cyan',    '#8dd3c7')
+Color.new('orange',  '#fdb462')
+Color.new('fire',    '#CF222B')
 
 -- Color assignments (see :h highlight-groups)
 
 Group.new("Normal",              colors.fg_foo,  colors.bg_foo,      styles.NONE)
 --
-Group.new("Comment",             colors.grey2,   colors.none,        styles.NONE)
+Group.new("Comment",             colors.grey1,   colors.none,        styles.NONE)
 --
 Group.new("Constant",            colors.blue,    colors.none,        styles.NONE)
 Group.new("String",              colors.cyan,    colors.none,        styles.NONE)
@@ -85,73 +84,65 @@ Group.new("Ignore",              colors.yellow,  colors.none,        styles.bold
 Group.new("Error",               colors.fire,    colors.none,        styles.bold)
 Group.new("Todo",                colors.green,   colors.none,        styles.NONE)
 --
-Group.new("TabLineSel",          colors.grey4,   colors.bg_foo,      styles.bold )
+Group.new("TabLineSel",          colors.fg_foo,  colors.bg_foo,      styles.bold )
 Group.new("TabLineSelSeparator", colors.orange,  colors.none,        styles.none)
-Group.new("TabLine",             colors.grey3,   colors.grey_accent,       styles.none)
-Group.new("TabLineSeparator",    colors.grey_accent,   colors.none,        styles.none)
+Group.new("TabLine",             colors.grey2,   colors.grey0,       styles.none)
+Group.new("TabLineSeparator",    colors.grey0,   colors.none,        styles.none)
 Group.new("TablineFill",         colors.red,     colors.bg_foo,      styles.none)
-Group.new("StatusLine",          colors.fg_foo,  colors.grey_accent, styles.none)
-Group.new("StatusLineNC",        colors.grey_accent,   colors.grey_accent, styles.none)
-Group.new("Conceal",             colors.bg_foo,  colors.grey4,       styles.none)
-Group.new("VertSplit",           colors.grey2,   colors.none,        styles.none)
+Group.new("StatusLine",          colors.fg_foo,  colors.grey0,       styles.none)
+Group.new("StatusLineNC",        colors.grey0,   colors.grey0,       styles.none)
+Group.new("Conceal",             colors.bg_foo,  colors.fg_foo,      styles.none)
+Group.new("VertSplit",           colors.grey1,   colors.none,        styles.none)
 --
 Group.new("ErrorMsg",            colors.bg_foo,  colors.fire,        styles.bold)
-Group.new("WarningMsg",          colors.grey4,   colors.grey2,       styles.bold)
-Group.new("Title",               colors.grey3,   colors.none,        styles.none)
-Group.new("CursorColumn",        colors.none,    colors.grey_accent, styles.NONE)
-Group.new("LineNr",              colors.grey2,   colors.bg_foo,      styles.NONE)
-Group.new("CursorLineNr",        colors.magenta, colors.grey_accent, styles.NONE)
+Group.new("WarningMsg",          colors.fg_foo,  colors.grey1,       styles.bold)
+Group.new("Title",               colors.grey2,   colors.none,        styles.none)
+Group.new("CursorColumn",        colors.none,    colors.grey1,       styles.NONE)
+Group.new("LineNr",              colors.grey1,   colors.bg_foo,      styles.NONE)
+Group.new("CursorLineNr",        colors.magenta, colors.grey0,       styles.NONE)
 Group.new("Line",                colors.fg_foo,  colors.none,        styles.bold)
 Group.new("SignColumn",          colors.fire,    colors.bg_foo,      styles.NONE)
-Group.new("ColorColumn",         colors.none,    colors.grey_accent, styles.none)
-Group.new("Cursor",              colors.bg_foo,  colors.grey3,       styles.none)
-Group.new("CursorLine",          colors.none,    colors.grey_accent, styles.none)
-Group.new("iCursor",             colors.bg_foo,  colors.grey3,       styles.none)
+Group.new("ColorColumn",         colors.none,    colors.grey0,       styles.none)
+Group.new("Cursor",              colors.bg_foo,  colors.grey2,       styles.none)
+Group.new("CursorLine",          colors.none,    colors.grey0,       styles.none)
+Group.new("iCursor",             colors.bg_foo,  colors.grey2,       styles.none)
 Group.new("EndOfBuffer",         colors.none,    colors.none,        styles.none)
-Group.new("MatchParen",          colors.yellow,  colors.grey2,       styles.none)
+Group.new("MatchParen",          colors.yellow,  colors.grey1,       styles.none)
 Group.new("NonText",             colors.none,    colors.none,        styles.none)
-Group.new("PMenu",               colors.fg_foo,  colors.grey_accent, styles.none)
+Group.new("PMenu",               colors.fg_foo,  colors.grey0,       styles.none)
 Group.new("QuickFixLine",        colors.bg_foo,  colors.orange,      styles.none)
 Group.new("qfFileName",          colors.cyan,    colors.none,        styles.none)
-Group.new("PmenuSbar",           colors.grey3,   colors.bg_foo,      styles.none)
+Group.new("PmenuSbar",           colors.grey2,   colors.bg_foo,      styles.none)
 Group.new("PMenuSel",            colors.red,     colors.bg_foo,      styles.none)
-Group.new("PmenuThumb",          colors.bg_foo,  colors.grey2,       styles.none)
-Group.new("NormalFloat",         colors.fg_foo,  colors.grey_accent, styles.none)
-Group.new("SpecialKey",          colors.grey2,   colors.none,        styles.none)
+Group.new("PmenuThumb",          colors.bg_foo,  colors.grey1,       styles.none)
+Group.new("NormalFloat",         colors.fg_foo,  colors.grey0,       styles.none)
+Group.new("SpecialKey",          colors.grey1,   colors.none,        styles.none)
 Group.new("SpellBad",            groups.String,  colors.none,        styles.underline)
 Group.new("SpellCap",            colors.fire,    colors.bg_foo,      styles.none)
-Group.new("SpellLocal",          colors.grey4,   colors.bg_foo,      styles.none)
-Group.new("SpellRare",           colors.grey4,   colors.bg_foo,      styles.none)
+Group.new("SpellLocal",          colors.fg_foo,  colors.bg_foo,      styles.none)
+Group.new("SpellRare",           colors.fg_foo,  colors.bg_foo,      styles.none)
 Group.new("Visual",              colors.bg_foo,  colors.cyan:dark(), styles.none)
 Group.new("VisualNOS",           colors.bg_foo,  colors.fg_foo,      styles.none)
-Group.new("Whitespace",          colors.grey_accent,   colors.bg_foo,      styles.none)
-Group.new("Folded",              colors.grey2,   colors.grey_accent, styles.none)
+Group.new("Whitespace",          colors.grey0,   colors.bg_foo,      styles.none)
+Group.new("Folded",              colors.grey1,   colors.grey0,       styles.none)
 Group.new("Directory",           colors.magenta, colors.bg_foo,      styles.none)
-
--- Git gutters and diffs
-
+--
 Group.new("DiffAdd",    colors.green, colors.bg_foo,  styles.none)
 Group.new("DiffChange", colors.blue, colors.bg_foo,   styles.none)
 Group.new("DiffDelete", colors.red, colors.bg_foo,    styles.none)
 Group.new("DiffText",   colors.yellow, colors.bg_foo, styles.none)
-
--- FZF
-
-Group.new("fzf1", colors.grey4, colors.bg_foo, styles.none)
-Group.new("fzf2", colors.grey4, colors.bg_foo, styles.none)
-Group.new("fzf3", colors.grey4, colors.bg_foo, styles.none)
-
--- Neovim
-
+--
+Group.new("fzf1", colors.fg_foo, colors.bg_foo, styles.none)
+Group.new("fzf2", colors.fg_foo, colors.bg_foo, styles.none)
+Group.new("fzf3", colors.fg_foo, colors.bg_foo, styles.none)
+--
 Group.new("healthError",   colors.yellow, colors.fire, styles.none)
 Group.new("healthSuccess", colors.yellow, colors.fire, styles.none)
 Group.new("healthWarning", colors.fire,   colors.fire, styles.none)
 Group.new("TermCursorNC",  colors.bg_foo, colors.fire, styles.none)
-Group.new("IncSearch",     colors.grey4,  colors.fire, styles.underline)
+Group.new("IncSearch",     colors.fg_foo,  colors.fire, styles.underline)
 Group.new("Search",        colors.bg_foo, colors.fire, styles.none)
-
--- vim
-
+--
 Group.new("vimcommand",      groups.Statement,  colors.none)
 Group.new("vimLet",          groups.vimcommand, colors.none)
 Group.new("vimFuncVar",      groups.identifier, colors.none)
@@ -166,9 +157,7 @@ Group.new("vimBracket",      groups.Delimiter,  colors.none)
 Group.new("vimMap",          groups.vimcommand, colors.none)
 Group.new("vimNotFunc",      groups.vimcommand, colors.none)
 Group.new("nvimMap",         groups.vimMap,     colors.none)
-
--- markdown
-
+--
 Group.new("markdownH1",                 colors.yellow,     colors.none, styles.bold)
 Group.new("markdownH2",                 colors.magenta,    colors.none, styles.bold)
 Group.new("markdownH3",                 colors.red,        colors.none, styles.bold)
@@ -185,24 +174,16 @@ Group.new("markdownCodeBlock",          colors.cyan,       colors.none, styles.n
 Group.new("markdownFootnoteDefinition", colors.cyan,       colors.none, styles.italic)
 Group.new("markdownListMarker",         colors.cyan,       colors.none, styles.bold)
 Group.new("markdownLineBreak",          colors.cyan,       colors.none, styles.underline)
-
--- Lua
-
+--
 Group.new("luaFunctionCall", groups.Function, groups.Function, groups.Function)
-
--- Python
-
+--
 Group.new("pythonoperator", groups.Operator, groups.Operator, styles.none)
-
--- Treesitter
-
+--
 Group.new("TSVariableBuiltin", groups.Special,     groups.Special,     styles.none) -- self
 Group.new("TSMethod",          groups.Function,    groups.Function,    styles.none) -- self.method()
 Group.new("TSConstant",        groups.Constant,    groups.Constant,    styles.none) -- self.variable
 Group.new("TSKeywordOperator", groups.Conditional, groups.Conditional, styles.none) -- is and not
-
--- Telescope
-
+--
 Group.new("TelescopeMatching",       colors.magenta , colors.none , styles.bold)
 Group.new("TelescopeSelection",      colors.yellow  , colors.none , styles.bold)
 Group.new("TelescopeSelectionCaret", colors.magenta , colors.none , styles.bold)
@@ -212,7 +193,7 @@ Group.new("TelescopePromptBorder",   colors.yellow  , colors.none , styles.bold)
 Group.new("TelescopeResultsBorder",  colors.red     , colors.none , styles.bold)
 Group.new("TelescopePreviewBorder",  colors.blue    , colors.none , styles.bold)
 
---                                        Terminal
+
 vim.api.nvim_set_var("terminal_color_0",  Color.to_rgb(colors.magenta))
 vim.api.nvim_set_var("terminal_color_1",  Color.to_rgb(colors.red))
 vim.api.nvim_set_var("terminal_color_2",  Color.to_rgb(colors.magenta))
