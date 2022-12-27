@@ -30,8 +30,8 @@ Color.new('grey1',   '#999999')
 Color.new('grey2',   '#ADADAD')
 Color.new('red',     '#FB8072')
 Color.new('green',   '#B3DE69')
-Color.new('yellow',  '#FFFFB3')
 Color.new('blue',    '#80B1D3')
+Color.new('yellow',  '#FFFFB3')
 Color.new('magenta', '#BEBADA')
 Color.new('cyan',    '#8DD3C7')
 Color.new('orange',  '#FDB462')
@@ -127,10 +127,14 @@ Group.new("Whitespace",                 colors.grey0,       colors.bg_foo,      
 Group.new("Folded",                     colors.grey1,       colors.grey0,       styles.none)
 Group.new("Directory",                  colors.magenta,     colors.bg_foo,      styles.none)
 --
-Group.new("DiffAdd",                    colors.green,       colors.bg_foo,      styles.none)
-Group.new("DiffChange",                 colors.blue,        colors.bg_foo,      styles.none)
-Group.new("DiffDelete",                 colors.red,         colors.bg_foo,      styles.none)
+Group.new("DiffAdd",                    colors.bg_foo,      colors.green,       styles.none)
+Group.new("DiffChange",                 colors.bg_foo,      colors.blue,        styles.none)
+Group.new("DiffDelete",                 colors.bg_foo,      colors.red,         styles.none)
 Group.new("DiffText",                   colors.yellow,      colors.bg_foo,      styles.none)
+--
+Group.new("GitSignsAdd",                colors.green,       colors.bg_foo,      styles.none)
+Group.new("GitSignsChange",             colors.blue,        colors.bg_foo,      styles.none)
+Group.new("GitSignsDelete",             colors.red,         colors.bg_foo,      styles.none)
 --
 Group.new("fzf1",                       colors.fg_foo,      colors.bg_foo,      styles.none)
 Group.new("fzf2",                       colors.fg_foo,      colors.bg_foo,      styles.none)
@@ -179,18 +183,18 @@ Group.new("luaFunctionCall",            groups.Function,    groups.Function,    
 --
 Group.new("pythonoperator",             groups.Operator,    groups.Operator,    styles.none)
 --
-Group.new("TSVariableBuiltin",          groups.Special,     groups.Special,     styles.none) -- self
-Group.new("TSMethod",                   groups.Function,    groups.Function,    styles.none) -- self.method()
-Group.new("TSConstant",                 groups.Constant,    groups.Constant,    styles.none) -- self.variable
-Group.new("TSKeywordOperator",          groups.Conditional, groups.Conditional, styles.none) -- is and not
+Group.new("TSVariableBuiltin",          groups.Special,     groups.Special,     styles.none)
+Group.new("TSMethod",                   groups.Function,    groups.Function,    styles.none)
+Group.new("TSConstant",                 groups.Constant,    groups.Constant,    styles.none)
+Group.new("TSKeywordOperator",          groups.Conditional, groups.Conditional, styles.none)
 --
-Group.new("TelescopeMatching",          colors.magenta,     colors.none,        styles.bold)
-Group.new("TelescopeSelection",         colors.yellow,      colors.none,        styles.bold)
-Group.new("TelescopeSelectionCaret",    colors.magenta,     colors.none,        styles.bold)
-Group.new("TelescopePromptPrefix",      colors.magenta,     colors.none,        styles.bold)
-Group.new("TelescopeBorder",            colors.cyan,        colors.none,        styles.bold)
-Group.new("TelescopePromptBorder",      colors.yellow,      colors.none,        styles.bold)
-Group.new("TelescopeResultsBorder",     colors.red,         colors.none,        styles.bold)
+Group.new("TelescopeMatching",          colors.orange,      colors.none,        styles.bold)
+Group.new("TelescopeSelection",         colors.orange,      colors.none,        styles.bold)
+Group.new("TelescopeSelectionCaret",    colors.orange,      colors.none,        styles.bold)
+Group.new("TelescopePromptPrefix",      colors.orange,      colors.none,        styles.bold)
+Group.new("TelescopeBorder",            colors.blue,        colors.none,        styles.bold)
+Group.new("TelescopePromptBorder",      colors.blue,        colors.none,        styles.bold)
+Group.new("TelescopeResultsBorder",     colors.blue,        colors.none,        styles.bold)
 Group.new("TelescopePreviewBorder",     colors.blue,        colors.none,        styles.bold)
 
 
@@ -210,4 +214,3 @@ vim.api.nvim_set_var("terminal_color_12", Color.to_rgb(colors.cyan))
 vim.api.nvim_set_var("terminal_color_13", Color.to_rgb(colors.red))
 vim.api.nvim_set_var("terminal_color_14", Color.to_rgb(colors.green))
 vim.api.nvim_set_var("terminal_color_15", Color.to_rgb(colors.fg_foo))
-
