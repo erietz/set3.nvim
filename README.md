@@ -1,4 +1,3 @@
-This is the only good theme that came out of all the playing I did with
-[vim-voodoo](https://github.com/erietz/vim-voodoo).
+Colorscheme for neovim with support for treesitter.
 
-![Screenshot](./media/2022-07-24-134603_1834x1222_scrot.png)
+![Screenshot](./media/Screenshot 2023-01-14 at 4.49.18 PM.png)
