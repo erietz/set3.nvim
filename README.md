@@ -13,7 +13,7 @@ use { 'erietz/set3.nvim', requires = 'tjdevries/colorbuddy.nvim' }
 # Usage
 
 ```lua
-vim.cmd.colorscheme(color)
+vim.cmd.colorscheme('set3')
 ```
 
 or
