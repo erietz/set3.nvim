@@ -18,16 +18,20 @@ local bg = vim.g.set3_bg
 if bg == 'hard' then
     Color.new('bg_foo', '#202224')
 elseif bg == 'medium' or bg == nil then
-    Color.new('bg_foo', '#2A2A2A')
+    Color.new('bg_foo', '#182025')
+    -- Color.new('bg_foo', '#2A2A2A')
+    -- Color.new('bg_foo', '#24292e')
+    -- Color.new('bg_foo', '#1a2b34')
+    -- Color.new('bg_foo', '#3b1a1a')
 elseif bg == 'soft' then
     Color.new('bg_foo', '#353535')
 end
 
 Color.new('black',   '#000000')
 Color.new('fg_foo',  '#D5D5D5')
-Color.new('grey0',   '#404040')
+Color.new('grey0',   '#1a2b34')
 Color.new('grey1',   '#999999')
-Color.new('grey2',   '#ADADAD')
+Color.new('grey2',   '#6f7b81')
 Color.new('red',     '#FB8072')
 Color.new('green',   '#B3DE69')
 Color.new('blue',    '#80B1D3')
@@ -36,6 +40,7 @@ Color.new('magenta', '#BEBADA')
 Color.new('cyan',    '#8DD3C7')
 Color.new('orange',  '#FDB462')
 Color.new('fire',    '#CF222B')
+Color.new('visual',  '#005f5f')
 
 -- Color assignments (see :h highlight-groups)
 
@@ -121,7 +126,7 @@ Group.new("SpellBad",                   groups.String,        colors.none,      
 Group.new("SpellCap",                   colors.fire,          colors.bg_foo,      styles.none)
 Group.new("SpellLocal",                 colors.fg_foo,        colors.bg_foo,      styles.none)
 Group.new("SpellRare",                  colors.fg_foo,        colors.bg_foo,      styles.none)
-Group.new("Visual",                     colors.bg_foo,        colors.cyan:dark(), styles.none)
+Group.new("Visual",                     colors.none,          colors.visual, styles.none)
 Group.new("VisualNOS",                  colors.bg_foo,        colors.fg_foo,      styles.none)
 Group.new("Whitespace",                 colors.grey0,         colors.bg_foo,      styles.none)
 Group.new("Folded",                     colors.grey1,         colors.grey0,       styles.none)
@@ -183,10 +188,10 @@ Group.new("luaFunctionCall",            groups.Function,      groups.Function,  
 --
 Group.new("pythonoperator",             groups.Operator,      groups.Operator,    styles.none)
 --
-Group.new("@field",                     colors.green:light(), colors.none,        styles.none)
-Group.new("@property",                  colors.green:light(), colors.none,        styles.none)
-Group.new("@variable.builtin",          colors.green:light(), colors.none,        styles.none)
-Group.new("@operator",                  colors.orange,        colors.none,        styles.none)
+Group.new("@field",                     colors.green:light(), colors.none,        styles.bold)
+Group.new("@property",                  colors.cyan:light(), colors.none,        styles.bold)
+Group.new("@variable.builtin",          colors.magenta:light(), colors.none,        styles.bold)
+Group.new("@operator",                  colors.orange,        colors.none,        styles.bold)
 --
 Group.new("TelescopeMatching",          colors.orange,        colors.none,        styles.bold)
 Group.new("TelescopeSelection",         colors.orange,        colors.none,        styles.bold)
